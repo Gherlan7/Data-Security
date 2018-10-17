@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+ void CaesarEnc (char message[],int key){
+ 
+        char character;
+        int i;
+ 
+        for(i=0;i<strlen(message);++i)
+        {
+            character = message[i]; //Seia fiecare caracter din mesaj pe rand
+ 
+            if(character>='a'&&character<='z') //Se verifica apartenenta caracterului in alfabet
+            {
+                character=character+key;
+ 
+                if(character > 'z')
+                {
+                    character = character - 'z' + 'a' - 1; //Se calculeaza caracterul cu care este substituit 
+                }
+ 
+                message[i] = character;
+            }
+ 
+             else if(character>='A'&&character<='Z')
+            {
+                character = character + key;
+ 
+                if(character > 'Z')
+                {
+                    character = character - 'Z' + 'A' - 1;
+                }
+ 
+                message[i] = character;
+            }
+        }
+ 
+        printf("Mesajul criptat este: %s" , message); //Afisaza mesajul criptat
+    }
+//Programul test 
+int main()
+{
+    char a[]={'a','n','a'};
+    CaesarEnc (a, 3);
+    return 0;
+}
