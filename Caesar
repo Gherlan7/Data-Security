@@ -8,7 +8,7 @@
  
         for(i=0;i<strlen(message);++i)
         {
-            character = message[i]; //Seia fiecare caracter din mesaj pe rand
+            character = message[i]; //Se ia fiecare caracter din mesaj pe rand
  
             if(character>='a'&&character<='z') //Se verifica apartenenta caracterului in alfabet
             {
@@ -16,7 +16,7 @@
  
                 if(character > 'z')
                 {
-                    character = character - 'z' + 'a' - 1; //Se calculeaza caracterul cu care este substituit 
+                    character = character - 'z' + 'a' - 1; //Se calculeaza caracterul cu care este substituit
                 }
  
                 message[i] = character;
@@ -24,7 +24,7 @@
  
              else if(character>='A'&&character<='Z')
             {
-                character = character + key;
+                character = character + key; //Se efectueaza cifrarea in conformitate cu cheia avuta
  
                 if(character > 'Z')
                 {
